@@ -6,18 +6,22 @@ var kelvInput = document.querySelector('#kelv > input');
 	function c2fk()
 	{
 		var celsTemp = parseFloat(celsInput.value);
+		
 		var fahrTemp = ((celsTemp * (9/5)) + 32); 
 		var kelvTemp = (celsTemp + 273.15);
 		fahrInput.value = fahrTemp;
 		kelvInput.value = kelvTemp;
+		//searchcity(celstemp)
 	};
 	function f2ck()
 	{
+		
 		var fahrTemp = parseFloat(fahrInput.value);
 		var celsTemp = ( (fahrTemp - 32 ) * (5/9) ); 
 		var kelvTemp = (celsTemp + 273.15);
 		celsInput.value = celsTemp;
 		kelvInput.value = kelvTemp;
+		//searchcity(fahrTemp)
 	};
 	function k2cf()
 	{
@@ -26,8 +30,15 @@ var kelvInput = document.querySelector('#kelv > input');
 		var fahrTemp = ( (celsTemp * (9/5)) + 32 ); 
 		celsInput.value = celsTemp;
 		fahrInput.value = fahrTemp;
+		//searchcity(kelvTemp)
 	};
+/*function searchcity(temp){
+array result{
+'City'  : 'Cairo',
+  'tempa': 32
+}
 
+}*/
 function main() {
 	celsInput.addEventListener('input', c2fk);
 	fahrInput.addEventListener('input', f2ck);
